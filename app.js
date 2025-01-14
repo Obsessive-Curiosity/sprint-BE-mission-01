@@ -13,11 +13,6 @@ mongoose
   .then(() => console.log("몽고디비 연결 성공^^"))
   .catch((err) => console.log(err));
 
-app.get("/db/data", async (req, res) => {
-  const data = await Task.find({});
-  res.send(data);
-});
-
 app.use("/", router);
 
 // 서버 시작
