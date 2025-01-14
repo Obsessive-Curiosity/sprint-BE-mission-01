@@ -1,0 +1,70 @@
+POST http://localhost:8000/blog
+Content-Type: application/json
+
+{
+  "title": "널 삭제해 보마",
+  "content": "으악 살려주세요",
+  "author": "민지영"
+}
+
+###
+
+PATCH http://localhost:8000/blog/6785e2a9023a2b0ccdabf29b
+Content-Type: application/json
+
+{
+  "content": "다시보니, 천사구나!"
+}
+
+###
+
+GET http://localhost:8000/blog
+
+###
+
+GET http://localhost:8000/blog/6785e2a9023a2b0ccdabf29b
+
+###
+
+DELETE http://localhost:8000/blog/6785e72f5af860f2befe60dd
+
+###
+
+POST http://localhost:8000/blog/6785e2a9023a2b0ccdabf29b/comment
+Content-Type: application/json
+
+{
+  "content": "님아 express도 못하면서 nest 먼저 하시게요 ?.?",
+  "author": "민지영" 
+}
+
+###
+
+GET http://localhost:8000/blog/6785e2a9023a2b0ccdabf29b/comment/6785fc60c2cc23081b8210e2
+
+###
+
+PATCH http://localhost:8000/blog/6785e2a9023a2b0ccdabf29b/comment/6785ea485fe0b7329a7cd5fb
+Content-Type: application/json
+
+{
+  "content": "혹시.. 천재세요?? 저는 express 먼저 마스터하고 가겠음!"
+}
+
+###
+
+DELETE http://localhost:8000/blog/6785e2a9023a2b0ccdabf29b/comment/6785fb4c3b734e6713b4546f
+
+###
+
+POST http://localhost:8000/blog/6785e2a9023a2b0ccdabf29b/comment/6785fc60c2cc23081b8210e2/reply
+Content-Type: application/json
+
+{
+  "content": "헐 님도 지영이임? 나도 지영임!",
+  "author": "이지영" 
+}
+
+###
+
+GET http://localhost:8000/blog/6785e2a9023a2b0ccdabf29b/comment/6785fc60c2cc23081b8210e2/reply
