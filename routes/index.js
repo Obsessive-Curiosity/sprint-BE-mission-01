@@ -6,7 +6,7 @@ import replyRouter from "./Reply/controllers.js";
 const router = express.Router();
 
 router.use("/blog", blogRouter);
-router.use("/blog/:blogId/comment", commentRouter);
-router.use("/blog/:blogId/comment/:commentId/reply", replyRouter);
+blogRouter.use("/:blogId/comment", commentRouter);
+commentRouter.use("/:commentId/reply", replyRouter);
 
 export default router;
